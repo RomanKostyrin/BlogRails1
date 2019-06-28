@@ -1,6 +1,11 @@
 <p>contacts</p>
 
 <%= form_for :contact, url: contacts_path do |f| %>
+	<% if @contact %>
+	<p>
+	<%= @contact.errors.full_messages %>	
+	</p>
+	<% end %>
 	<p> 
 	<%= f.label :email %><br/>
 	<%= f.text_field :email %>
