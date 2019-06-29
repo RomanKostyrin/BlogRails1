@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
 # <%= link_to 'Show all articles', articles_path %>
   
+  def index
+    @articles =Article.all
+  end
+
   def show
     @article =Article.find(params[:id])
   end
