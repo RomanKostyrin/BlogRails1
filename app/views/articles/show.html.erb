@@ -1,16 +1,19 @@
 <h1><%= @article.title %></h1>
 <h2><%= @article.text %></h2>
 <%= link_to 'Show all articles', articles_path %>
-
+<hr />
+<h2>All Comments</h2>
+<hr />
 <% @article.comments.each do |comment| %>
-	<h3><%= comment.author  %> said:</h3>
+	<h4><%= comment.author  %> said:</h4>
 	<p>
 		<%= comment.body %>		
 	</p>
 	------------------------------------
 <% end %>
 <hr />
-
+<h2>Add your comment</h2>
+<hr />
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
 	<p> 
