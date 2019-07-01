@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 # <%= link_to 'Show all articles', articles_path %>
   
+  before_action :authenticate_user!
 
 
   def index
