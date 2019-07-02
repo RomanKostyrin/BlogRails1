@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 # <%= link_to 'Show all articles', articles_path %>
   
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :only => [:new, :create]
 
 
   def index
